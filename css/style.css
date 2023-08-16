@@ -1,0 +1,545 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden !important;
+  font-family: 'Geologica', sans-serif;
+  width: auto;
+}
+
+body{
+    background: #6BC4C2;
+    background-image: url(../img/ondas.svg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.icocompra{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.notificacompra{
+    display: none;
+    margin: 15px;
+    background-color: #217067;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 12px;
+    padding: 9px;
+    position: absolute;
+    right: 60px;
+}
+
+.icomodal {
+    width: 50px;
+    height: auto;
+    margin: 12px;
+}
+
+.inicio {
+    display: flex;
+    font-weight: 900;
+    font-size: 39px;
+    width: 60%;
+    margin-inline: 21%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: -30px;
+    margin-top: -30px;
+}
+
+.LogoBV {
+    display: flex;
+    justify-content: center;
+    width: 21%;
+    height: auto;
+    display: block;
+    padding: 0px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 524px) {
+    .LogoBV{
+    width: 90%;
+    padding: 6px;
+}     
+}
+     
+.categorias {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hoja_menu_esp {
+    display: none;
+    width: 100vw;
+    justify-content: center;
+}
+
+.hoja_menu_bebid {
+    display: none;
+    width: 100vw;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.subtitulo {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: #437674;
+    margin: 15px;
+    transition: 100ms;
+}
+
+.subtitulo:hover {
+    font-style: italic;
+    cursor: pointer;
+}
+
+.ico_menu {
+    align-items: center;
+    width: 60px;
+    height: auto;
+}
+
+.tit_ico {
+    font-weight: 300;
+    font-size: 17px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.colum_menu {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 42px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sect_menu {
+        font-weight: 600;
+        font-size: 21px;
+        color: #ffffff;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: 36px;
+}
+
+.menu_gale {
+    display: flex;
+
+}
+
+.contenedor_menu {
+    margin: 45px 12px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.foto_menu {
+    width: 180px;
+    flex-shrink: 0;
+    margin: 3px;
+    border-radius: 50%;
+    box-shadow: #000 2px 2px 4px;
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 88vw;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.platio {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #47645d;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    gap: 9px;
+    padding-bottom: 6px;
+}
+
+.desc_platio {
+    font-weight: 200;
+    font-size: 19px;
+    color: #ffffff;
+    margin-top: 6px;
+}
+
+.desc_menu {
+    width: 86vw;
+}
+
+.nombre {
+    text-align: left;
+    width: 200px;
+}
+
+.precio {
+    color: #2C807B;
+    text-align: end;
+    width: 74px;
+}
+
+.pedido {
+    display:flex;
+    gap: 3px;   
+}
+
+.pedido_boton {
+    display: flex;
+    background-color: #97e5e3;
+    border: outset 3px #61b4b2;
+    border-radius: 36px;
+    font-weight: 600;
+    font-size: 9px;
+    color: #ffffff;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    pad: 4px;
+    margin: 9px 0px 18px;
+}
+
+.pedido_boton:hover {
+    background-color: #6ddfc1;
+    border: outset 4px #fff;
+    color: #fff;
+}
+
+.ico_pedido {
+    width: 36px;
+    margin: 8px 10px 6px;
+}
+
+@media (max-width: 524px) {
+    .pedido_boton {
+      font-size: 17px;
+    }
+    .ico_pedido {
+        width: 30px;
+    }
+}
+
+.pedbutontext {
+    padding: 3px;
+    margin-right: 5px;
+    text-shadow: 0px 2px 3px black;
+}
+
+@media (max-width: 524px) {
+    .subtitulo {
+      font-size: 24px;
+    }
+    .platio {
+      font-size: 19px;
+      gap: 2px;
+
+    }
+    .desc_platio {
+        font-size: 14px;
+    }
+  }
+
+  .Logo_pie {
+    width: 72px;
+    height: 72px;
+  }
+
+  .ico_gv {
+    display: grid;
+    place-items: center;
+    margin-top: 12px;
+    margin-bottom: 30px;
+  }
+
+  .rayita {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0 15px;
+    text-align: center;
+    height: 2px;
+    box-shadow: 0 6px 10px 2px black;
+    background-color: #20605b;
+  }
+
+  .contac {
+    font-weight: 600;
+    font-size: 21px;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    margin-bottom: 21px;
+    margin-top: 9px;
+  }
+
+.redeees {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    gap: 36px;
+}
+
+.cont_redes {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+ }
+
+.redes {
+    width: 47px;
+    height: auto;
+    align-items: center;
+ }
+
+ .tex_redes {
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 100;
+    display: grid;
+    place-items: center;
+ }
+
+ .cont_redes:hover {
+    cursor: pointer;
+ }
+
+ .todomodal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    display: none;
+ }
+
+.rectangulomodal {
+    display: flex;
+    justify-content: end;
+    width: 93vw;
+    height: auto;
+    border-radius: 21px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 72px;
+    margin-inline: 3.5vw;
+}
+
+.modal {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: auto;
+    margin-bottom: 24px;
+    margin-top: 9px;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 2px #20605b;
+}
+
+.titmodal {
+    color: #326868;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    margin: 9px;
+}
+
+.contmodal {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detallesmodal {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    width: 90vw;
+}
+
+.fotomodal {
+    display: flex;
+    width: 63px;
+    border-radius: 50%;
+    margin: 6px;
+}
+
+.descripmodal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    gap: 6px;
+}
+
+.productomodal {
+    width: calc(90vw - 120px);
+    font-size: 17px;
+    color: #2b2b2b;
+    margin: 3px;
+}   
+
+.preciomodal {
+    width: calc(90vw - 120px);
+    font-size: 15px;
+    color: #2b2b2b;
+    margin: 3px;
+} 
+
+.botoncancel {
+    width: 24px;
+    margin: 6px;
+}
+
+.pagacantidad {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 75vw;
+    display: none;
+}
+
+.hazTuPedido {
+    justify-content: center;
+    font-size: 24px;
+    color: #326868;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 21px;
+}
+
+.compra {
+    width: max-content;
+    border-radius: 21px;
+    margin-top: 16px;
+    margin-bottom: 17px;
+    padding: 6px;
+    font-size: 16px;
+    background-color: #326868;
+    color: #fff;
+    border: outset 2px #61b4b2;
+}
+
+.closemodal {
+    width: 24px;
+    margin-right: 6px;
+    align-items: center;
+}
+
+.cantidadespedido{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding-bottom: 9px;
+    border-bottom: solid 1px #326868;
+    width: 74vw;
+    justify-content: center;
+}
+
+.modalbotonmenos {
+    width: 21px;
+    height: 21px;
+    margin-inline: 6px;
+}
+
+.totalmodal {
+    color: #326868;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    margin: 9px;
+}
+
+.modalbotonmas {
+    width: 21px;
+    height: 21px;
+    margin-inline: 6px;
+}
+
+.modalCantidad {
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.modalGracias {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    display: none;
+}
+
+.contModalGracias {
+    display: flex;
+    justify-content: flex-end;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 72px;
+    margin-inline: 20vw;
+    gap: 6px;
+}
+
+.contModalGraciasImg {
+    width: 58vw;
+}

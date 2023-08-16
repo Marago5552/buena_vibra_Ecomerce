@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buena Vibra</title>
+    <link rel="shortcut icon" href="img/Logo.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+    <meta name="description" content="Buena Vibra Cocina Tropical, la mejor comida tropical en Santa María Huatulco, Oaxaca">
+    <meta name="keywords" content="Comida Tropical"> 
+</head>
+
+<body>
+    
+    <div class="icocompra">
+        <div class="notificacompra">Revisa tu pedido » »</div>
+        <img class="icomodal" onclick="pedidoMostrar()"src="img/pedido.png" alt="">
+    </div>
+
+    <section id="inicio" class="inicio">
+        <div class="LogoBV">
+            <img src="img/Logo_600.png" class="logo">
+        </div>
+    </section>
+
+    <section class="categorias">
+        <div class="subtitulo">
+           <a href="#especialidad" onclick="mostrarSeccion('esp')"><img class="ico_menu" src="img/ico_especial.png">
+            <h4 class="tit_ico">Especialidades</h4></a>
+        </div>
+        <div class="subtitulo">
+            <a href="#bebidas" onclick="mostrarSeccion('bebid')"><img class="ico_menu" src="img/ico_bebida.png">
+            <h4 class="tit_ico">Bebidas</h4></a>
+        </div>
+       
+    </section>
+
+    <section>
+        <div class="rayita">
+            <p><hr></p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu_gale">
+             
+      <div id="especialidad" class="hoja_menu_esp">
+        
+        <div class="colum_menu">
+            <div class="sect_menu"><h4>Especialidades</h4></div>
+
+        <div class="contenedor_menu">
+                <div class="producto">
+                    <img class="foto_menu" src="img/empanadas.png" alt="empanadas de mariscos">
+                        <div class="desc_menu">
+                            <h5 class="platio">
+                                <span class="nombre">Empanadas Buena Vibra</span>
+                                <span class="precio">$100</span>
+                            </h5>
+                            <small class="desc_platio">Tortillas de mano, pimiento morrón, calabacita, zanahoria, cebolla morada y mezcla de quesos.</small>
+                        </div>
+
+                            <div class="pedido">
+                                <button class="pedido_boton" onclick="pedidoNot()"><img class="ico_pedido" src="img/pedido.png"><span class="pedbutontext">Agregar Pedido</span></button>
+                            </div> 
+                              
+                        </div>    
+            </div>
+                    
+        <div class="contenedor_menu">
+                <div class="producto">
+                    <img class="foto_menu" src="img/Sashimi.png" alt="empanadas de mariscos">
+                        <div class="desc_menu">
+                            <h5 class="platio">
+                                <span class="nombre">Sashimi</span>
+                                <span class="precio">$110</span>
+                            </h5>
+                            <small class="desc_platio">Pesca del día curtida en limón, salsa de soya, cebolla morada y chilito cerrano.</small>
+                        </div>
+                        
+                        <div class="pedido">
+                            <button class="pedido_boton" onclick="pedidoNot()"><img class="ico_pedido" src="img/pedido.png"><span class="pedbutontext">Agregar Pedido</span></button>
+                        </div> 
+
+                </div>
+            </div>    
+
+        <div class="contenedor_menu">
+                <div class="producto">
+                    <img class="foto_menu" src="img/Alambre.png" alt="empanadas de mariscos">
+                        <div class="desc_menu">
+                            <h5 class="platio">
+                                <span class="nombre">Alambre de mariscos</span>
+                                <span class="precio">$99</span>
+                            </h5>
+                            <small class="desc_platio">Pimiento morrón, calabacita, zanahoria, cebolla morada y mezcla de quesos.</small>
+                        </div>  
+                        
+                        <div class="pedido">
+                            <button class="pedido_boton" onclick="pedidoNot()"><img class="ico_pedido" src="img/pedido.png"><span class="pedbutontext">Agregar Pedido</span></button>
+                         </div> 
+                        
+                </div>
+            </div>    
+
+        <div class="contenedor_menu">
+                <div class="producto">
+                    <img class="foto_menu" src="img/Lonja_1.png" alt="empanadas de mariscos">
+                        <div class="desc_menu">
+                            <h5 class="platio">
+                                <span class="nombre">Lonja de Pezcado</span>
+                                <span class="precio">$200</span>
+                            </h5>
+                            <small class="desc_platio">Lonja de Pez vela marinado y a la parrilla.</small>
+                        </div>  
+                        
+                        <div class="pedido">
+                            <button class="pedido_boton" onclick="pedidoNot()"><img class="ico_pedido" src="img/pedido.png"><span class="pedbutontext">Agregar Pedido</span></button>
+                         </div> 
+                        
+                </div>
+            </div>    
+           
+        </div>
+      </div>
+     
+
+
+      <div id="bebidas" class="hoja_menu_bebid">
+        
+        <div class="colum_menu">
+            <div class="sect_menu"><h4>Bebidas</h4></div>
+
+            <div class="contenedor_menu">
+                <div class="producto">
+                    <img class="foto_menu" src="img/chela.png" alt="empanadas de mariscos">
+                        <div class="desc_menu">
+                            <h5 class="platio">
+                                <span class="nombre">Cervezas</span>
+                                <span class="precio">$15</span>
+                            </h5>
+                            <small class="desc_platio">Corona, Victoria, Carta Blanca.</small>
+                        </div>
+                        
+                        <div class="pedido">
+                            <button class="pedido_boton" onclick="pedidoNot()"><img class="ico_pedido" src="img/pedido.png"><span class="pedbutontext">Agregar Pedido</span></button>
+                        </div> 
+
+                </div>
+            </div>
+            
+            <div class="contenedor_menu">
+                <div class="producto">
+                    <img class="foto_menu" src="img/chelas_.png" alt="empanadas de mariscos">
+                        <div class="desc_menu">
+                            <h5 class="platio">
+                                <span class="nombre">Cervezas Internacionales</span>
+                                <span class="precio">$20</span>
+                            </h5>
+                            <small class="desc_platio">Cerveza Artesanal, pregunta por disponibilidad.</small>
+                        </div> 
+                        
+                        <div class="pedido">
+                            <button class="pedido_boton" onclick="pedidoNot()"><img class="ico_pedido" src="img/pedido.png"><span class="pedbutontext">Agregar Pedido</span></button>
+                        </div>
+
+                </div>
+            </div>    
+
+            <div class="contenedor_menu">
+                <div class="producto">
+                    <img class="foto_menu" src="img/agua.png" alt="empanadas de mariscos">
+                        <div class="desc_menu">
+                            <h5 class="platio">
+                                <span class="nombre">Agua tropical</span>
+                                <span class="precio">$15</span>
+                            </h5>
+                            <small class="desc_platio">Agua con fruta de la temporada.</small>
+                        </div> 
+                        
+                        <div class="pedido">
+                            <button class="pedido_boton" onclick="pedidoNot()"><img class="ico_pedido" src="img/pedido.png"><span class="pedbutontext">Agregar Pedido</span></button>
+                        </div>
+
+                </div>
+            </div>    
+
+            <div class="contenedor_menu">
+                <div class="producto">
+                    <img class="foto_menu" src="img/tepach.png" alt="empanadas de mariscos">
+                        <div class="desc_menu">
+                            <h5 class="platio">
+                                <span class="nombre">Tepache / Tepachela</span>
+                                <span class="precio">$10</span>
+                            </h5>
+                            <small class="desc_platio">Tepachela con corona o victoria</small>
+                        </div> 
+                        
+                        <div class="pedido">
+                            <button class="pedido_boton" onclick="pedidoNot()"><img class="ico_pedido" src="img/pedido.png"><span class="pedbutontext">Agregar Pedido</span></button>
+                        </div>
+
+                </div>
+            </div>  
+                
+        </div>
+      </div> 
+
+    </section>
+  
+    <section>
+        <div class="ico_gv">
+            <a href="#inicio"><img src="img/inicio.png" alt="LogoBV" class="Logo_pie"></a>
+        </div>
+    </section>
+
+    <section class="todomodal">
+        
+        <div class="rectangulomodal">
+
+            <div class="modal">
+                <div>
+                    <p class="titmodal">Tu pedido</p>
+                </div>
+                <div>
+                    <img class="closemodal" onclick="cerrarModal()" src="img/cancel_.png" alt="">
+                </div>
+            </div>
+
+                <div class="contmodal">
+                    
+<!--
+                    <div class="detallesmodal">
+                        <div>
+                            <img class="fotomodal" src="img/Logo_600.png" alt="">
+                        </div>
+                        <div class="descripmodal">
+                            <p class="productomodal"></p>
+                            <p class="preciomodal"></p>
+                        </div>
+                        <div>
+                            <img class="botoncancel" src="img/cancel.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cantidadespedido">
+                        <img class="modalbotonmenos" src="img/menos_.png" alt="">
+                        <input id="cantidades" type="number" value="1" class="modalCantidad" disabled>
+                        <img class="modalbotonmas" src="img/mas_.png" alt="">
+                    </div>
+                </div>
+-->
+                </div>
+                
+                <div class="hazTuPedido">
+                    <h5>Agrega platillos a tu pedido</h5>
+                </div>
+                
+                
+                <div  class="pagacantidad">
+                    <button class="compra">Hacer pedido</button>
+                    <p class="totalmodal" type="number">$0</p>
+                </div>
+
+
+        </div>
+           
+    </section>
+
+
+    <section class="modalGracias">
+
+        <div class="contModalGracias">
+            
+            <img class="modalGraciasImg" src="img/gracias.png" alt="">
+            
+        </div>
+
+    </section>
+
+
+ <section>
+    <div class="rayita">
+        <p class="line"><hr></p>
+    </div>
+    
+ </section>
+
+
+ <script src="js/pedidos.js"></script>
+</body>
+
+</html>
