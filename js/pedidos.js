@@ -211,6 +211,9 @@ function pedidoBotonClicked () {
         return /iPhone/i.test(navigator.userAgent);
     }
     
+    var today = new Date();
+    var now = today.toLocaleString();
+
     function sendEmailPedido(pedido) {
         var email = 'saul.alvarado.corona@gmail.com';
         var asunto = `Pedido realizado ${now}`;
@@ -219,10 +222,7 @@ function pedidoBotonClicked () {
         var mailtoURL = `mailto:${email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
         window.location.href = mailtoURL;
     }
-       
-    var today = new Date();
-    var now = today.toLocaleString();
-    
+         
     const urlDesktop = 'https://api.whatsapp.com/';
     const telefono = '529581178091';
 
