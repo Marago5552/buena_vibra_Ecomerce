@@ -159,9 +159,10 @@ function actualizarTotal() {
         const element = document.querySelector('.todomodal');
         element.style.display ='block';
       }
-      
-const pedidoBoton = document.querySelector('.compra');
-pedidoBoton.addEventListener('click', pedidoBotonClicked);
+
+/*
+      const pedidoBoton = document.querySelector('.compra');
+      pedidoBoton.addEventListener('click', pedidoBotonClicked);
 
 function pedidoBotonClicked () {
 
@@ -238,6 +239,79 @@ function pedidoBotonClicked () {
   
     }, 3000);
    
+    modalNuevoContenedor.innerHTML = '';
+    platillosAgregados.clear();
+    actualizarTotal();
+    cerrarModal();
+    modalGracias();
+
+    const cerosTotal = document.querySelector('.totalmodal');
+    const cerosTotalCheck = Number(cerosTotal.textContent.replace('$',''));
+
+    if (cerosTotalCheck == '0') {
+        const element = document.querySelector('.notificacompra');
+         element.style.display ='none';
+    }
+    if (cerosTotalCheck == '0') {
+        const element = document.querySelector('.hazTuPedido');
+         element.style.display ='block';
+    }   
+      if (cerosTotalCheck != '0') {
+        const element = document.querySelector('.hazTuPedido');
+         element.style.display ='none';
+    }   
+      if (cerosTotalCheck == '0') {
+        const element = document.querySelector('.pagacantidad');
+         element.style.display ='none';
+    }
+}
+
+*/
+
+const pedidoBoton = document.querySelector('.compra');
+pedidoBoton.addEventListener('click', pedidoBotonClicked);
+
+function pedidoBotonClicked() {
+    const productomodalElements = document.querySelectorAll('.productomodal');
+    const modalCantidadElements = document.querySelectorAll('.modalCantidad');
+
+   let total = 0;
+
+   let pedidoW = "Pedido: \n \n";
+
+    for (let i = 0; i < productomodalElements.length; i++) {
+        const nombreProducto = productomodalElements[i].textContent;
+        const cantidadProducto = modalCantidadElements[i].value;
+
+        const detallesmodal = productomodalElements[i].closest('.detallesmodal');
+        const precioPlatillo = detallesmodal.querySelector('.preciomodal');
+        const precioUnicoPlatillo = parseFloat(precioPlatillo.textContent.replace('$', ''));
+
+        const subtotal = precioUnicoPlatillo * parseFloat(cantidadProducto);
+        total += subtotal;
+
+        pedidoW += `${cantidadProducto} - ${nombreProducto}\nSub-Total: $${subtotal.toFixed(2)}\n \n`;
+    }
+
+    pedidoW += `Total: $${total.toFixed(2)} \n \n`;
+
+    const today = new Date();
+    const now = today.toLocaleString();
+   
+  
+    function sendEmailPedido(pedido) {
+        var email = 'saul.alvarado.corona@gmail.com';
+        var asunto = `Pedido realizado ${now}`;
+        var cuerpo = '¡Hola! Aquí está el pedido:\n\n' + pedido + '\n' + now + '';
+    
+        var mailtoURL = `mailto:${email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+        window.location.href = mailtoURL;
+    }
+
+    setTimeout(() => { 
+        sendEmailPedido(pedidoW);
+    }, 3000);
+
     modalNuevoContenedor.innerHTML = '';
     platillosAgregados.clear();
     actualizarTotal();
