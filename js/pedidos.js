@@ -168,7 +168,7 @@ function pedidoBotonClicked () {
     const productomodalElements = document.querySelectorAll('.productomodal');
     const modalCantidadElements = document.querySelectorAll('.modalCantidad');
 
-    let pedidoW = "Pedido: \n%0A";
+    let pedidoW = "Pedido: \n \n";
 
     let total = 0;
 
@@ -183,10 +183,10 @@ function pedidoBotonClicked () {
         const subtotal = precioUnicoPlatillo * parseFloat(cantidadProducto);
         total += subtotal;
 
-        pedidoW += `%0A${nombreProducto}%0A Cant: *${cantidadProducto}* / Sub total: $${subtotal.toFixed(2)}\n%0A`;
+        pedidoW += `_${cantidadProducto}_ - *${nombreProducto}*\nSub-Total: $${subtotal.toFixed(2)}\n \n`;
     }
 
-    pedidoW += `%0ATotal: *$${total.toFixed(2)}*%0A`;
+    pedidoW += `Total: *$${total.toFixed(2)}* \n \n`;
 
     function isMobile() {
         if (sessionStorage.desktop)
@@ -195,26 +195,30 @@ function pedidoBotonClicked () {
             return true;
         var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
         for (var i in mobile)
-            if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+            if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) !== -1) return true;
         return false;
     }
     
+    console.log(isMobile);
+
     var today = new Date();
     var now = today.toLocaleString();
     
     const urlDesktop = 'https://api.whatsapp.com/';
-    const urlMobile = 'whatsapp://';
     const telefono = '529581178091';
+
+setTimeout(() => {
+    let mensaje = '*Buena Vibra* \n' + '' + pedidoW + '' + now + '';
+
+    if (isMobile()) {
+        var urlMobile = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        window.open(urlMobile, '_blank');
+    } else {
+        var urlDesktop = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+        window.open(urlDesktop, '_blank');
+    }
+}, 3000);
     
-           setTimeout(() => {
-            let mensaje = 'send?phone=' + telefono + '&text=*Pedido Buena Vibra*%0A' + pedidoW + '%0A' + now + ''
-            if(isMobile()) {
-                window.open(urlMobile + mensaje, '_blank')
-            }else{
-                window.open(urlDesktop + mensaje, '_blank')
-            }
-            
-            }, 2000);
    
     modalNuevoContenedor.innerHTML = '';
     platillosAgregados.clear();
