@@ -188,6 +188,14 @@ function pedidoBotonClicked () {
 
     pedidoW += `Total: *$${total.toFixed(2)}* \n \n`;
 
+    if (isMobile() && !isIPhone()) {
+        var urlMobile = `https://wa.me/${telefono}?text=${encodeURIComponent(pedidoW)}`;
+        window.open(urlMobile, '_blank');
+    } else {
+        sendEmailPedido(pedidoW);
+    }
+
+
     function isMobile() {
         if (sessionStorage.desktop)
             return false;
@@ -198,9 +206,20 @@ function pedidoBotonClicked () {
             if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) !== -1) return true;
         return false;
     }
-    
-    console.log(isMobile);
 
+    function isIPhone() {
+        return /iPhone/i.test(navigator.userAgent);
+    }
+    
+    function sendEmailPedido(pedido) {
+        var email = 'saul.alvarado.corona@gmail.com';
+        var asunto = `Pedido realizado ${now}`;
+        var cuerpo = '¡Hola! Aquí está el pedido:\n\n' + pedido;
+    
+        var mailtoURL = `mailto:${email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+        window.location.href = mailtoURL;
+    }
+       
     var today = new Date();
     var now = today.toLocaleString();
     
@@ -217,8 +236,9 @@ setTimeout(() => {
         var urlDesktop = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
         window.open(urlDesktop, '_blank');
     }
+  
 }, 3000);
-    
+
    
     modalNuevoContenedor.innerHTML = '';
     platillosAgregados.clear();
@@ -245,4 +265,4 @@ setTimeout(() => {
         const element = document.querySelector('.pagacantidad');
          element.style.display ='none';
     }
-   }
+}
