@@ -192,7 +192,7 @@ const now = today.toLocaleString();
 function sendWhatsapp(pedidoW) {
     const telefono = '529581178091';
     const mensaje = encodeURIComponent(pedidoW);
-    const urlWhatsapp = `https://wa.me/${telefono}?text=${mensaje}`;
+    const urlWhatsapp = `https://wa.me/${telefono}?text=${mensaje}\n${now}`;
     window.open(urlWhatsapp, '_blank');
 }
 
@@ -230,11 +230,11 @@ if (cerosTotalCheck == '0') {
     const element = document.querySelector('.hazTuPedido');
      element.style.display ='block';
 }   
-  if (cerosTotalCheck != '0') {
+if (cerosTotalCheck != '0') {
     const element = document.querySelector('.hazTuPedido');
      element.style.display ='none';
 }   
-  if (cerosTotalCheck == '0') {
+if (cerosTotalCheck == '0') {
     const element = document.querySelector('.pagacantidad');
      element.style.display ='none';
 }
