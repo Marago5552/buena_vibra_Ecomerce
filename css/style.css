@@ -55,12 +55,10 @@ body{
 .LogoBV {
     display: flex;
     justify-content: center;
-    width: 21%;
+    width: 69%;
     height: auto;
     display: block;
-    padding: 0px;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 39px;
 }
 
 .logo {
@@ -68,10 +66,10 @@ body{
     height: auto;
 }
 
-@media (max-width: 524px) {
+@media (min-width: 780px) {
     .LogoBV{
-    width: 90%;
-    padding: 6px;
+   width: 30%;
+    padding: 17px;
 }     
 }
      
@@ -164,13 +162,19 @@ a {
 }
 
 .sect_menu {
-        font-weight: 600;
-        font-size: 21px;
-        color: #ffffff;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        margin-top: 36px;
+    font-weight: 600;
+    font-size: 21px;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+@media (min-width: 780px) {
+    .sect_menu {
+        font-size: 39px;
+     }   
 }
 
 .menu_gale {
@@ -229,9 +233,27 @@ a {
 }
 
 .precio {
-    color: #2C807B;
+    font-weight: 900;
+    color: #ffffff;
     text-align: end;
     width: 74px;
+}
+
+@media (min-width: 780px) {
+    .producto {
+        width: 85vw;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .desc_menu {
+        width: 43vw;
+    }
+    .nombre {
+        width: 400px;
+    }
+    .precio {
+        width: 100px;
+    }
 }
 
 .pedido {
@@ -245,7 +267,7 @@ a {
     border: outset 3px #61b4b2;
     border-radius: 36px;
     font-weight: 600;
-    font-size: 9px;
+    font-size: 13px;
     color: #ffffff;
     flex-direction: row;
     align-items: center;
@@ -265,12 +287,17 @@ a {
     margin: 8px 10px 6px;
 }
 
-@media (max-width: 524px) {
+@media (min-width: 780px) {
     .pedido_boton {
-      font-size: 17px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6px 12px 12px;
     }
     .ico_pedido {
-        width: 30px;
+      width: 40px;
+      margin: 13px 0px 2px;
     }
 }
 
@@ -280,26 +307,34 @@ a {
     text-shadow: 0px 2px 3px black;
 }
 
-@media (max-width: 524px) {
-    .subtitulo {
-      font-size: 24px;
-    }
-    .platio {
-      font-size: 19px;
-      gap: 2px;
-
-    }
-    .desc_platio {
-        font-size: 14px;
-    }
-  }
-
-  .Logo_pie {
+ .Logo_pie {
     width: 72px;
     height: 72px;
   }
 
-  .ico_gv {
+@media (min-width: 780px) {
+    .pedbutontext {
+        width: 82px;
+        margin: 0px;
+        padding-bottom: 9px;
+    }
+    .subtitulo {
+      font-size: 36px;
+    }
+    .platio {
+      font-size: 25px;
+      gap: 9px;
+    }
+    .desc_platio {
+        font-size: 19px;
+    }
+    .Logo_pie {
+        width: 115px;
+        height: 115px;
+    }
+  }
+
+   .ico_gv {
     display: grid;
     place-items: center;
     margin-top: 12px;
@@ -571,4 +606,17 @@ input {
 
 .contModalGraciasImg {
     width: 58vw;
+}
+
+@media (min-width: 780px) {
+    .contModalGracias {
+        width: 35vw;
+        height: 35vh;
+        border-radius: 200px;
+        margin-inline: 30vw;
+        margin-top: 200px;
+    }
+    .contModalGraciasImg {
+        width: 33vw;
+    }
 }
