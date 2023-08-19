@@ -617,3 +617,53 @@ input {
         width: 33vw;
     }
 }
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contModalPop {
+    width: 89vw;
+    height: 76vh;
+    overflow: visible;
+}
+
+.contModalPopImg {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.modalPopCerrar {
+    width: 63px;
+    filter: drop-shadow(0px -1px 3px black);
+}
+
+.modalPopImg {
+    width: 73vw;
+    border-radius: 50%;
+    filter: drop-shadow(0px -4px 7px black);
+}
+
+@media (min-width: 780px) {
+    .contModalPop{
+        width: 41vw;
+        height: 59vh;
+        overflow: visible;
+    }
+    .modalPopCerrar{
+        width: 81px;
+    }
+    .modalPopImg{
+        width: 36vw;
+    }
+}

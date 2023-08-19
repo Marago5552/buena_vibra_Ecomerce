@@ -19,3 +19,8 @@ function modalGracias() {
     element.style.display = 'none';
   }, 6000);
 }
+
+function cerrarPopUp(){
+  const element = document.querySelector('.popup');
+  element.style.display ='none';
+}

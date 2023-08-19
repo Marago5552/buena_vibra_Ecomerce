@@ -39,13 +39,13 @@ const modalNuevoCont =`
                 <p class="preciomodal">${precioProduct}</p>
             </div>
             <div>
-                <img class="botoncancel" src="img/cancel.png" alt="">
+                <img class="botoncancel" src="img/cancel.webp" alt="">
             </div>
         </div>
         <div class="cantidadespedido">
-            <img class="modalbotonmenos" src="img/menos_.png" alt="">
+            <img class="modalbotonmenos" src="img/menos_.webp" alt="">
             <input id="cantidades" value="1" type="number" class="modalCantidad" disabled>
-            <img class="modalbotonmas" src="img/mas_.png" alt="">
+            <img class="modalbotonmas" src="img/mas_.webp" alt="">
         </div>
         </div>
         `;
